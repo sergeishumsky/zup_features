@@ -142,7 +142,7 @@ pipeline {
                 }
             }
         }
-        stage("Тестирование ADD") {
+        stage("Тестирование VA") {
             steps {
                 timestamps {
                     script {
