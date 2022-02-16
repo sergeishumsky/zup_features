@@ -241,7 +241,7 @@ def restoreTask(serverSql, infobase, backupPath, sqlUser, sqlPwd) {
             timestamps {
                 sqlUtils = new SqlUtils()
 
-                //sqlUtils.createEmptyDb(serverSql, infobase, sqlUser, sqlPwd)
+                sqlUtils.createEmptyDb(serverSql, infobase, sqlUser, sqlPwd)
                 sqlUtils.restoreDb(serverSql, infobase, backupPath, sqlUser, sqlPwd)
             }
         }
