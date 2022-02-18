@@ -9,7 +9,7 @@
     "vanessa": {
         "--vanessasettings": "tools/VBParams.json",
         "--workspace": ".",
-        "--pathvanessa": "D:\Users\Shumsky\Tests\vanessa-automation-zuptip\vanessa-automation\vanessa-automation.epf",
+        "--pathvanessa": "tools/vanessa-automation-single.epf",
         "--additional": "/DisplayAllFunctions /L ru"
     }
 }
