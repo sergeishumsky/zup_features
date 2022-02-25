@@ -16,7 +16,8 @@ def createDb(platform, server1c, serversql, base, cfdt, isras) {
     sqluser = "sa"
     sqlpassw = "123qweASD"
     
-    cfdtpath = ""
+    //cfdtpath = ""
+    cfdtpath = "D:/Jenkins/dtfiles/zup_tip_start.dt"
     if (cfdt != null && !cfdt.isEmpty()) {
         cfdtpath = "-cfdt ${cfdt}"
     }
