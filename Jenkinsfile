@@ -113,22 +113,22 @@ pipeline {
                                 testbase
                             )
                             // 5. Обновляем тестовую базу из хранилища 1С (если применимо)
-                            updateDbTasks["updateTask_${testbase}"] = updateDbTask(
-                                platform1c,
-                                testbase, 
-                                storage1cPath, 
-                                storageUser, 
-                                storagePwd, 
-                                testbaseConnString, 
-                                admin1cUser, 
-                                admin1cPwd
+                            //updateDbTasks["updateTask_${testbase}"] = updateDbTask(
+                            //    platform1c,
+                            //    testbase, 
+                            //    storage1cPath, 
+                            //    storageUser, 
+                            //    storagePwd, 
+                            //    testbaseConnString, 
+                            //    admin1cUser, 
+                            //    admin1cPwd
                             )
                             // 6. Запускаем внешнюю обработку 1С, которая очищает базу от всплывающего окна с тем, что база перемещена при старте 1С
-                            runHandlers1cTasks["runHandlers1cTask_${testbase}"] = runHandlers1cTask(
-                                testbase, 
-                                admin1cUser, 
-                                admin1cPwd,
-                                testbaseConnString
+                            //runHandlers1cTasks["runHandlers1cTask_${testbase}"] = runHandlers1cTask(
+                            //    testbase, 
+                            //    admin1cUser, 
+                            //    admin1cPwd,
+                            //    testbaseConnString
                             )
                         }
 
@@ -166,11 +166,11 @@ pipeline {
                             admin1cPwdLine = "--db-pwd ${admin1cPwd}"
                         }
                         // Запускаем ADD тестирование на произвольной базе, сохранившейся в переменной testbaseConnString
-                        returnCode = utils.cmd("runner vanessa --settings tools/vrunner.json ${platform1cLine} --ibconnection \"${testbaseConnString}\" ${admin1cUsrLine} ${admin1cPwdLine}")
+                        //returnCode = utils.cmd("runner vanessa --settings tools/vrunner.json ${platform1cLine} --ibconnection \"${testbaseConnString}\" ${admin1cUsrLine} ${admin1cPwdLine}")
 
-                        if (returnCode != 0) {
-                            utils.raiseError("Возникла ошибка при запуске ADD на сервере ${server1c} и базе ${testbase}")
-                        }
+                        //if (returnCode != 0) {
+                        //    utils.raiseError("Возникла ошибка при запуске ADD на сервере ${server1c} и базе ${testbase}")
+                        //}
                     }
                 }
             }
