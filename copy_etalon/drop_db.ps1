@@ -11,7 +11,7 @@ Param (
     [Parameter()][string]$passw = "",
     [Parameter()][string]$sqluser = "",
     [Parameter()][string]$sqlPwd = "",
-    [Parameter()][string]$fulldrop = $false
+    [Parameter()][string]$fulldrop = $true
 )
 
 $baseuser = $user
